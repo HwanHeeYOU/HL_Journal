@@ -1,0 +1,72 @@
+// HL Journal — Prisma Schema
+// DB: Prisma Postgres (cloud)
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ─── User ────────────────────────────────────────────────────────────────────
+model User {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  entries   JournalEntry[]
+}
+
+// ─── Journal Entry ────────────────────────────────────────────────────────────
+model JournalEntry {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  title     String
+  content   String
+  mood      Mood
+  tags      String[]   // e.g. ["Work", "Relationship"]
+  status    EntryStatus @default(DRAFT)
+
+  userId    String
+  user      User         @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  insight   CBTInsight?
+}
+
+// ─── CBT Insight (RAG result linked to an entry) ─────────────────────────────
+model CBTInsight {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+
+  // LLM-generated summary of the journal entry
+  entrySummary String
+
+  // Retrieved book passages (stored as JSON array of BookInsight)
+  // Shape: [{ quote, source: { title, author, chapter, page }, whyItRelates, reflectionQuestion }]
+  bookInsights Json
+
+  entryId   String       @unique
+  entry     JournalEntry @relation(fields: [entryId], references: [id], onDelete: Cascade)
+}
+
+// ─── Enums ────────────────────────────────────────────────────────────────────
+enum Mood {
+  Anxious
+  Overwhelmed
+  Calm
+  Sad
+  Energetic
+  Hopeful
+  NotSure
+}
+
+enum EntryStatus {
+  DRAFT
+  IN_PROGRESS
+  COMPLETED
+}

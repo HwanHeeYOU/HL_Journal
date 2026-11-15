@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-inter: "Inter", system-ui, sans-serif;
+}
+
+@layer base {
+  html {
+    /* Mobile-first: simulate phone viewport */
+    background-color: #e5e7eb;
+    /* Horizontal swipes switch tabs — don't let them trigger browser back/forward */
+    overscroll-behavior-x: none;
+  }
+
+  body {
+    @apply bg-cream text-gray-900 antialiased;
+    font-family: var(--font-inter), system-ui, sans-serif;
+    max-width: 390px;
+    margin: 0 auto;
+    min-height: 100dvh;
+    position: relative;
+  }
+}
+
+@layer utilities {
+  .safe-bottom {
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+  }
+  /* Replaces the mock status bar: respects the notch, keeps a little breathing room */
+  .safe-top {
+    padding-top: max(env(safe-area-inset-top, 0px), 0.75rem);
+  }
+}
+
+/* ─── Entries list: mobile-style scroll container ──────────────────────────── */
+@layer components {
+  .entries-container {
+    -webkit-overflow-scrolling: touch;   /* momentum on older iOS Safari; no-op on modern browsers */
+    overscroll-behavior-y: contain;      /* don't drag the whole page at the list edges */
+    scrollbar-width: none;               /* Firefox */
+    /* soft fade at top/bottom edges instead of a hard cut */
+    -webkit-mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 20px), transparent 100%);
+    mask-image: linear-gradient(to bottom, transparent 0, #000 12px, #000 calc(100% - 20px), transparent 100%);
+  }
+  .entries-container::-webkit-scrollbar {
+    display: none;                       /* Safari / Chrome on touch */
+  }
+
+  /* Mouse / trackpad: show a thin, quiet scrollbar so the list is discoverable */
+  @media (pointer: fine) {
+    .entries-container {
+      scrollbar-width: thin;
+      scrollbar-color: rgb(0 0 0 / 0.12) transparent;
+    }
+    .entries-container::-webkit-scrollbar {
+      display: block;
+      width: 4px;
+    }
+    .entries-container::-webkit-scrollbar-thumb {
+      background: rgb(0 0 0 / 0.12);
+      border-radius: 9999px;
+    }
+  }
+}
+
+/* ─── Mood card ripple gradient animation ──────────────────────────────────── */
+@keyframes gradientShift {
+  0%   { background-position: 0% 50%; }
+  50%  { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.mood-gradient-anxious {
+  background: linear-gradient(135deg, #ede9f5, #ddd5f0, #ede9f5, #e8e0f8);
+  background-size: 300% 300%;
+  animation: gradientShift 5s ease infinite;
+}
+.mood-gradient-overwhelmed {
+  background: linear-gradient(135deg, #f5ede9, #f0ddd5, #f5ede9, #f8e4dc);
+  background-size: 300% 300%;
+  animation: gradientShift 5.5s ease infinite;
+}
+.mood-gradient-calm {
+  background: linear-gradient(135deg, #eaf0e3, #d9ebd0, #eaf0e3, #e0f0d8);
+  background-size: 300% 300%;
+  animation: gradientShift 6s ease infinite;
+}
+.mood-gradient-sad {
+  background: linear-gradient(135deg, #e9eff5, #d5e2f0, #e9eff5, #dce8f5);
+  background-size: 300% 300%;
+  animation: gradientShift 5.8s ease infinite;
+}
+.mood-gradient-energetic {
+  background: linear-gradient(135deg, #f5f2e3, #ede8cc, #f5f2e3, #f0ecda);
+  background-size: 300% 300%;
+  animation: gradientShift 4.8s ease infinite;
+}
+.mood-gradient-hopeful {
+  background: linear-gradient(135deg, #eaf0e3, #e0f0d5, #eaf0e3, #d5ebc8);
+  background-size: 300% 300%;
+  animation: gradientShift 5.2s ease infinite;
+}
+/* ─── Voice input waveform ──────────────────────────────────────────────────── */
+@keyframes voiceBar {
+  0%, 100% { transform: scaleY(0.35); }
+  50%      { transform: scaleY(1); }
+}
+.voice-bar {
+  transform-origin: center;
+  animation: voiceBar 0.9s ease-in-out infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .voice-bar { animation: none; }
+}
+
+.mood-gradient-notsure {
+  background: linear-gradient(135deg, #f0f0f0, #e8e8e8, #f0f0f0, #ebebeb);
+  background-size: 300% 300%;
+  animation: gradientShift 6.5s ease infinite;
+}

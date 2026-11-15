@@ -1,0 +1,555 @@
+{
+  "_meta": {
+    "description": "CBT and Interpersonal knowledge base for HL Journal RAG pipeline",
+    "primarySource": {
+      "title": "Feeling Good: The New Mood Therapy",
+      "author": "David D. Burns",
+      "year": 1980,
+      "note": "Content paraphrased for educational use. Not verbatim reproduction."
+    },
+    "plannedSources": [
+      {
+        "title": "Mind Over Mood",
+        "authors": ["Dennis Greenberger", "Christine A. Padesky"],
+        "status": "pending_license"
+      },
+      {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "status": "pending_license"
+      },
+      {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "status": "active"
+      }
+    ],
+    "version": "2.0.0",
+    "lastUpdated": "2026-11-04"
+  },
+  "chunks": [
+    {
+      "id": "burns-cbt-001",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 40,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "All-or-Nothing Thinking",
+      "tags": ["perfectionism", "failure", "binary thinking", "흑백논리", "완벽주의"],
+      "text": "All-or-nothing thinking refers to the tendency to evaluate experiences in extreme, black-or-white categories. If a situation falls short of perfect, you see it as a total failure. This pattern underlies perfectionism and causes you to fear any mistake or imperfection.",
+      "socraticQuestions": [
+        "Is there a middle ground between complete success and total failure here?",
+        "What would you say to a close friend who described this situation the same way?",
+        "이 상황을 성공 또는 실패라는 두 가지 범주로만 판단해야 하는 객관적인 근거가 있는가?"
+      ],
+      "relatedMoods": ["Anxious", "Overwhelmed", "Sad", "좌절감"]
+    },
+    {
+      "id": "burns-cbt-002",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 42,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Overgeneralization",
+      "tags": ["always", "never", "pattern", "single event", "과잉일반화"],
+      "text": "Overgeneralization occurs when you arbitrarily conclude that one thing that happened once will occur repeatedly. The words 'always' and 'never' are clues that this distortion may be operating.",
+      "socraticQuestions": [
+        "How many times has this actually happened versus how many times it could have?",
+        "이번 경험이 앞으로도 모든 비슷한 상황에서 반복될 것이라고 판단할 만한 충분한 사례가 있는가?"
+      ],
+      "relatedMoods": ["Anxious", "Sad", "Overwhelmed", "무력감"]
+    },
+    {
+      "id": "burns-cbt-003",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 44,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Mental Filter",
+      "tags": ["negative", "focus", "filtering", "tunnel vision", "정신적 여과"],
+      "text": "A mental filter involves picking out a single negative detail and dwelling on it exclusively, so that your vision of all reality becomes darkened, like the drop of ink that discolors the entire beaker of water.",
+      "socraticQuestions": [
+        "What parts of this situation are you not focusing on right now?",
+        "지금 내가 집중하고 있는 부정적인 정보 외에 함께 고려해야 할 사실은 무엇인가?"
+      ],
+      "relatedMoods": ["Sad", "Anxious", "Overwhelmed", "우울감"]
+    },
+    {
+      "id": "burns-cbt-004",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 46,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Discounting the Positive",
+      "tags": ["positive", "discount", "rejection", "neutral", "긍정 축소"],
+      "text": "Disqualifying the positive involves rejecting positive experiences by insisting they 'don't count' for some reason or another. You can maintain a negative belief that is contradicted by your everyday experiences.",
+      "socraticQuestions": [
+        "Why do you feel this positive experience doesn't count?",
+        "이번 결과에 운이나 타인의 도움이 있었다고 해도 내가 직접 기여한 부분은 무엇인가?"
+      ],
+      "relatedMoods": ["Sad", "Hopeful", "Calm", "열등감"]
+    },
+    {
+      "id": "burns-cbt-005",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 48,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Jumping to Conclusions",
+      "tags": ["mind reading", "fortune telling", "assumption", "성급한 결론"],
+      "text": "Jumping to conclusions involves making negative interpretations even though there are no definite facts to support your conclusion. This includes mind reading — assuming you know what others are thinking — and fortune telling — predicting things will turn out badly.",
+      "socraticQuestions": [
+        "What is the actual evidence that this person was thinking negatively about you?",
+        "내가 내린 결론을 뒷받침하는 직접적인 증거와 단순한 추측은 각각 무엇인가?"
+      ],
+      "relatedMoods": ["Anxious", "Sad", "Overwhelmed", "의심"]
+    },
+    {
+      "id": "burns-cbt-006",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 50,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Magnification and Minimization",
+      "tags": ["catastrophizing", "exaggeration", "shrinking", "과장과 축소"],
+      "text": "Magnification involves exaggerating the importance of problems and shortcomings. Minimization involves shrinking the importance of your desirable qualities or others' imperfections. Catastrophizing is a common form of magnification.",
+      "socraticQuestions": [
+        "What is the worst-case scenario, and how likely is it actually?",
+        "현재 문제의 실제 영향과 장기적인 결과를 객관적으로 평가하면 어느 정도인가?"
+      ],
+      "relatedMoods": ["Anxious", "Overwhelmed", "두려움"]
+    },
+    {
+      "id": "burns-cbt-007",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 52,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Emotional Reasoning",
+      "tags": ["feelings", "facts", "emotions", "evidence", "감정적 추론"],
+      "text": "Emotional reasoning involves assuming that your negative emotions necessarily reflect the way things really are: 'I feel it, therefore it must be true.' This distortion treats feelings as facts.",
+      "socraticQuestions": [
+        "What are the facts of the situation, separate from how you feel about it?",
+        "내가 지금 느끼는 감정은 무엇이며, 그 감정과 별개로 확인할 수 있는 객관적인 사실은 무엇인가?"
+      ],
+      "relatedMoods": ["Anxious", "Sad", "Overwhelmed", "수치심"]
+    },
+    {
+      "id": "burns-cbt-008",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 54,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Should Statements",
+      "tags": ["should", "must", "ought", "self-criticism", "당위적 사고"],
+      "text": "Should statements involve trying to motivate yourself with shoulds and shouldn't, musts and oughts. The emotional consequences are guilt, shame, and self-loathing. When should statements are directed toward others, the result is often anger and frustration.",
+      "socraticQuestions": [
+        "Where did this rule come from, and does it still make sense for your current situation?",
+        "내가 반드시 그래야 한다고 생각하는 기준은 현실적이고 유연한 기준인가?"
+      ],
+      "relatedMoods": ["Anxious", "Overwhelmed", "Sad", "죄책감", "분노"]
+    },
+    {
+      "id": "burns-cbt-009",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 56,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Labeling and Mislabeling",
+      "tags": ["label", "identity", "mistake", "character", "낙인찍기"],
+      "text": "Labeling involves creating a completely negative self-image based on your errors. Instead of saying 'I made a mistake,' you say 'I'm a loser.' Mislabeling involves describing an event with language that is highly colored and emotionally loaded.",
+      "socraticQuestions": [
+        "Is this label a fair description of you as a whole person, or just one behavior in one situation?",
+        "내가 지금 사용한 부정적인 표현은 구체적인 행동을 설명하는 것인가, 사람 전체를 규정하는 것인가?"
+      ],
+      "relatedMoods": ["Sad", "Anxious", "Overwhelmed", "수치심"]
+    },
+    {
+      "id": "burns-cbt-010",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 3: You Feel the Way You Think",
+        "page": 58,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "Personalization",
+      "tags": ["blame", "responsibility", "fault", "control", "개인화"],
+      "text": "Personalization involves assuming responsibility for a negative event when there is no basis for doing so. You arbitrarily conclude that what happened was your fault or reflects your inadequacy, even when you were not primarily responsible.",
+      "socraticQuestions": [
+        "What other factors contributed to this outcome besides your own actions?",
+        "이 상황에 영향을 준 요인은 무엇이며, 내가 실제로 통제할 수 있었던 부분은 어디까지인가?"
+      ],
+      "relatedMoods": ["Sad", "Anxious", "Overwhelmed"]
+    },
+    {
+      "id": "burns-cbt-011",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 4: Start by Building Self-Esteem",
+        "page": 70,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "General — Self-Compassion",
+      "tags": ["self-compassion", "kindness", "inner critic", "자기 자비"],
+      "text": "Many people find they would never speak to a friend the way they speak to themselves. Developing the ability to observe your own thoughts with the same compassion you would offer a close friend is a foundational skill in cognitive therapy.",
+      "socraticQuestions": [
+        "What would you say to a close friend who was going through exactly what you are describing?",
+        "지금 가장 친한 친구가 이 똑같은 고민을 가지고 나를 찾아왔다면, 나는 뭐라고 말해줄 것인가?"
+      ],
+      "relatedMoods": ["Sad", "Anxious", "Overwhelmed", "Hopeful"]
+    },
+    {
+      "id": "burns-cbt-012",
+      "source": {
+        "title": "Feeling Good: The New Mood Therapy",
+        "author": "David D. Burns",
+        "chapter": "Chapter 5: Do-Nothingism",
+        "page": 90,
+        "edition": "Revised and Updated, 1999"
+      },
+      "distortionType": "General — Motivation and Action",
+      "tags": ["procrastination", "motivation", "action", "동기 부여"],
+      "text": "Motivation does not always precede action — often it follows it. Waiting until you 'feel like' doing something can keep you stuck indefinitely. Starting with a small, concrete step often generates the energy needed to continue.",
+      "socraticQuestions": [
+        "What is the smallest possible step you could take in the next few minutes?",
+        "지금 당장 5분만 가볍게 시작해볼 수 있는 아주 작은 행동은 무엇이 있을까요?"
+      ],
+      "relatedMoods": ["Overwhelmed", "Sad", "Anxious", "의욕"]
+    },
+    {
+      "id": "cbt-carnegie-013",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 7: Identifying Automatic Thoughts",
+        "page": 115,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Thought Record",
+      "tags": ["사고 기록지", "인지 재구성", "근거 탐색"],
+      "text": "사고 기록지는 감정적으로 어려웠던 상황에서 자동적 사고와 이를 뒷받침하거나 반박하는 증거, 대안적 사고를 체계적으로 정리하는 인지치료 도구이다.",
+      "socraticQuestions": [
+        "내 생각이 사실이라고 믿게 만드는 구체적인 증거와 그 생각에 반대되는 증거는 각각 무엇인가?"
+      ],
+      "relatedMoods": ["불안감", "우울감"]
+    },
+    {
+      "id": "cbt-carnegie-014",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 9: Recognizing and Modifying Core Beliefs",
+        "page": 160,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Cognitive Conceptualization",
+      "tags": ["핵심 신념", "중간 신념", "반복 패턴"],
+      "text": "인지적 개념화는 현재의 어려움과 반복되는 자동적 사고를 더 깊은 수준의 중간 신념과 핵심 신념에 연결하여 이해하는 과정이다.",
+      "socraticQuestions": [
+        "비슷한 상황에서 반복적으로 나타나는 생각에는 어떤 공통된 주제나 규칙이 있는가?"
+      ],
+      "relatedMoods": ["불안감", "열등감"]
+    },
+    {
+      "id": "cbt-carnegie-015",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 6: Structure of the First Therapy Session",
+        "page": 95,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Collaborative Empiricism",
+      "tags": ["협력적 경험주의", "가설 검증", "객관적 탐색"],
+      "text": "협력적 경험주의는 자신의 생각을 절대적인 진실이 아니라 검토하고 확인할 수 있는 가설로 바라보는 접근법이다.",
+      "socraticQuestions": [
+        "내가 사실이라고 믿는 생각을 하나의 가설로 바라본다면, 이를 확인하거나 반박할 수 있는 관찰 가능한 증거는 무엇인가?"
+      ],
+      "relatedMoods": ["불확실성", "불안감"]
+    },
+    {
+      "id": "cbt-carnegie-016",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 13: Behavioral Activation",
+        "page": 240,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Graded Task Assignment",
+      "tags": ["단계적 과제", "행동 계획", "목표 세분화"],
+      "text": "단계적 과제 설정은 부담스럽거나 복잡하게 느껴지는 목표를 작고 구체적인 행동 단위로 나누어 실행하는 전략이다.",
+      "socraticQuestions": [
+        "현재 내가 부담스럽게 느끼는 목표를 오늘 실행할 수 있는 가장 작은 행동으로 나눈다면 무엇인가?"
+      ],
+      "relatedMoods": ["압박감", "무기력"]
+    },
+    {
+      "id": "cbt-carnegie-017",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 13: Behavioral Activation",
+        "page": 245,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Behavioral Activation",
+      "tags": ["행동 활성화", "활동 계획", "우울감 관리"],
+      "text": "행동 활성화는 기분이 좋아질 때까지 기다리기보다 의미 있거나 보람 있는 활동에 계획적으로 참여하여 긍정적인 경험을 늘리는 접근법이다.",
+      "socraticQuestions": [
+        "최근 기분과 관계없이 참여했을 때 작은 만족감이나 성취감을 느꼈던 활동은 무엇인가?"
+      ],
+      "relatedMoods": ["무기력", "우울감"]
+    },
+    {
+      "id": "cbt-carnegie-018",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 13: Behavioral Activation",
+        "page": 248,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Activity Monitoring",
+      "tags": ["활동 모니터링", "시간 기록", "감정 추적"],
+      "text": "활동 모니터링은 하루 동안 수행한 활동과 당시의 기분, 에너지 또는 만족도를 기록하여 생활 패턴을 파악하는 전략이다.",
+      "socraticQuestions": [
+        "오늘 어떤 활동을 했을 때 에너지와 기분이 좋아졌으며, 어떤 활동 이후에 피로감이나 부담이 커졌는가?"
+      ],
+      "relatedMoods": ["피로감", "무기력"]
+    },
+    {
+      "id": "cbt-carnegie-019",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 13: Behavioral Activation",
+        "page": 252,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Pleasure and Mastery Scheduling",
+      "tags": ["즐거움과 성취감", "활동 균형", "일정 관리"],
+      "text": "즐거움과 숙달 경험을 위한 일정 계획은 일상에 즐거움을 주는 활동과 능력이나 책임감을 느낄 수 있는 활동을 균형 있게 배치하는 전략이다.",
+      "socraticQuestions": [
+        "최근 일상에서 즐거움을 느꼈던 활동과 스스로 해냈다는 성취감을 느꼈던 활동은 각각 무엇인가?"
+      ],
+      "relatedMoods": ["무기력", "공허감"]
+    },
+    {
+      "id": "cbt-carnegie-020",
+      "source": {
+        "title": "Cognitive Behavior Therapy: Basics and Beyond",
+        "author": "Judith S. Beck",
+        "chapter": "Chapter 14: Problem Solving",
+        "page": 270,
+        "edition": "2nd Edition, 2011"
+      },
+      "distortionType": "Problem-Solving Training",
+      "tags": ["문제 해결", "대안 탐색", "실행 계획"],
+      "text": "문제 해결 훈련은 막연한 걱정을 구체적으로 정의하고 가능한 해결책을 탐색한 뒤 실행과 평가를 반복하는 체계적인 접근법이다.",
+      "socraticQuestions": [
+        "현재 나를 가장 힘들게 하는 문제를 감정적인 표현이 아닌 구체적이고 해결 가능한 문장으로 정의한다면 무엇인가?"
+      ],
+      "relatedMoods": ["스트레스", "막막함"]
+    },
+    {
+      "id": "cbt-carnegie-021",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 2, Chapter 1: Do This and You'll Be Welcome Anywhere",
+        "page": 35,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Become Genuinely Interested in Other People",
+      "tags": ["진정한 관심", "경청", "공감", "관계 형성"],
+      "text": "진정한 관심을 보이는 것은 대화를 자신의 이야기나 목적에만 집중시키지 않고 상대방의 경험과 생각을 이해하려는 태도이다.",
+      "socraticQuestions": [
+        "최근 대화에서 나는 상대방을 이해하려고 질문했는가, 아니면 내 이야기를 전달하는 데 더 집중했는가?"
+      ],
+      "relatedMoods": ["소외감", "관계에 대한 불안"]
+    },
+    {
+      "id": "cbt-carnegie-022",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 2, Chapter 2: A Simple Way to Make a Good First Impression",
+        "page": 45,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Remember and Use People's Names",
+      "tags": ["이름 기억", "존중 표현", "사회적 유대"],
+      "text": "상대방의 이름을 기억하고 자연스럽게 사용하는 것은 그 사람을 개별적인 존재로 존중하고 관심을 표현하는 소통 방식이다.",
+      "socraticQuestions": [
+        "나는 상대방을 하나의 역할이나 직책으로만 대하지 않고 고유한 사람으로 존중하고 있는가?"
+      ],
+      "relatedMoods": ["어색함", "소외감"]
+    },
+    {
+      "id": "cbt-carnegie-023",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 2, Chapter 3: If You Don't Do This, You're Headed for Trouble",
+        "page": 55,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Be a Good Listener",
+      "tags": ["적극적 경청", "대화 집중", "공감적 반응"],
+      "text": "좋은 경청은 상대방이 말하는 동안 자신의 반박이나 답변을 준비하기보다 상대방의 메시지와 감정을 충분히 이해하려는 태도이다.",
+      "socraticQuestions": [
+        "상대방이 이야기할 때 나는 충분히 듣고 있는가, 아니면 대답하거나 반박할 내용을 먼저 생각하고 있는가?"
+      ],
+      "relatedMoods": ["답답함", "외로움"]
+    },
+    {
+      "id": "cbt-carnegie-024",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 2, Chapter 4: How to Interest People",
+        "page": 65,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Talk in Terms of the Other Person's Interests",
+      "tags": ["상대방의 관심사", "공통점 발견", "관점 전환"],
+      "text": "상대방의 관심사와 필요를 고려해 대화하는 것은 자신의 관점만 전달하는 방식에서 벗어나 상호 이해를 높이는 접근이다.",
+      "socraticQuestions": [
+        "내가 전달하려는 내용에서 상대방이 가장 중요하게 생각할 부분은 무엇일까?"
+      ],
+      "relatedMoods": ["답답함", "소통의 어려움"]
+    },
+    {
+      "id": "cbt-carnegie-025",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 1: You Can't Win an Argument",
+        "page": 110,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Avoid Direct Criticism and Condemnation",
+      "tags": ["비판 자제", "비난 감소", "갈등 완화"],
+      "text": "직접적인 비난과 인격에 대한 공격을 피하는 것은 대인관계에서 방어적인 반응을 줄이고 문제 자체에 집중하기 위한 소통 원칙이다.",
+      "socraticQuestions": [
+        "내가 상대방에게 불만을 표현할 때 구체적인 행동을 지적하고 있는가, 아니면 상대방의 인격이나 의도를 평가하고 있는가?"
+      ],
+      "relatedMoods": ["분노", "서운함"]
+    },
+    {
+      "id": "cbt-carnegie-026",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 2: A Sure Way of Making Enemies—and How to Avoid It",
+        "page": 120,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Give Honest and Sincere Appreciation",
+      "tags": ["진심 어린 인정", "감사 표현", "긍정적 피드백"],
+      "text": "진심 어린 인정과 감사는 상대방의 노력과 기여를 구체적으로 알아보고 표현하는 소통 방식이다.",
+      "socraticQuestions": [
+        "최근 주변 사람이 보여준 노력이나 배려 중 내가 실제로 고맙게 생각했던 구체적인 행동은 무엇인가?"
+      ],
+      "relatedMoods": ["고마움", "관계에 대한 만족감"]
+    },
+    {
+      "id": "cbt-carnegie-027",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 3: If You're Wrong, Admit It",
+        "page": 130,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Show Respect for Others' Opinions",
+      "tags": ["의견 존중", "관점 수용", "건설적 토론"],
+      "text": "상대방의 의견을 존중하는 것은 의견 차이가 있더라도 상대방의 관점을 이해할 가치가 있음을 인정하는 태도이다.",
+      "socraticQuestions": [
+        "상대방의 의견에 동의하지 않는다는 이유만으로 그 사람의 관점이나 경험까지 무시하고 있지는 않은가?"
+      ],
+      "relatedMoods": ["답답함", "대립감"]
+    },
+    {
+      "id": "cbt-carnegie-028",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 3: If You're Wrong, Admit It",
+        "page": 135,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Admit Your Mistakes Quickly and Emphatically",
+      "tags": ["실수 인정", "책임감", "신뢰 회복"],
+      "text": "자신의 잘못을 신속하고 솔직하게 인정하는 것은 변명이나 책임 회피로 갈등을 키우지 않고 신뢰를 회복하기 위한 소통 원칙이다.",
+      "socraticQuestions": [
+        "이번 상황에서 내가 실제로 잘못했거나 상대방에게 불편을 준 행동은 무엇인가?"
+      ],
+      "relatedMoods": ["죄책감", "미안함"]
+    },
+    {
+      "id": "cbt-carnegie-029",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 4: A Drop of Honey",
+        "page": 145,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Begin in a Friendly Way",
+      "tags": ["우호적 태도", "갈등 대화", "감정 조절"],
+      "text": "우호적인 태도로 대화를 시작하는 것은 갈등 상황에서도 상대방을 공격하거나 몰아세우지 않고 문제를 함께 해결할 수 있는 분위기를 조성하는 원칙이다.",
+      "socraticQuestions": [
+        "내가 지금 하려는 대화의 목적은 상대방을 이기는 것인가, 아니면 문제를 함께 해결하는 것인가?"
+      ],
+      "relatedMoods": ["긴장감", "분노"]
+    },
+    {
+      "id": "cbt-carnegie-030",
+      "source": {
+        "title": "How to Win Friends and Influence People",
+        "author": "Dale Carnegie",
+        "chapter": "Part 3, Chapter 10: How to Change People Without Giving Offense or Arousing Resentment",
+        "page": 180,
+        "edition": "Pocket Books, 1981"
+      },
+      "distortionType": "Let the Other Person Save Face",
+      "tags": ["체면 존중", "배려 있는 피드백", "상호 존중"],
+      "text": "상대방의 체면을 존중하는 것은 잘못이나 의견 차이를 지적하더라도 그 사람의 자존감과 사회적 존엄성을 불필요하게 훼손하지 않는 소통 원칙이다.",
+      "socraticQuestions": [
+        "내가 문제를 지적하는 방식이 상대방의 행동을 개선하는 데 도움이 되는가, 아니면 불필요하게 수치심이나 방어심을 유발하는가?"
+      ],
+      "relatedMoods": ["당혹감", "갈등에 대한 불안"]
+    }
+  ]
+}
